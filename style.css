@@ -447,11 +447,10 @@ audio::-webkit-media-controls-panel {
 
 /* ==================== МЪРЧ СЕКЦИЯ ==================== */
 .merch-grid {
-    position: absolute;
+position: absolute;
     top: 190px;
-    right: 12%;
-    width: 51%;
-    height: 350px;
+    left: 25%;
+    width: 53%;
     display: grid;
     grid-template-columns: 1fr 1fr;   /* по две карти на ред */
     gap: 25px;
