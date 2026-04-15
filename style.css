@@ -477,6 +477,28 @@ position: absolute;
     object-fit: cover;
 }
 
+.merch-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.merch-card a {
+    display: block;
+}
+
+.merch-card img:hover {
+    transform: scale(1.04);
+    filter: brightness(1.1);
+}
+
+/* По-добър изглед при отваряне в нов таб */
+.merch-card a img {
+    cursor: zoom-in;
+}
+
+
 .merch-info {
     padding: 15px;
     text-align: center;
