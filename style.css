@@ -449,8 +449,8 @@ audio::-webkit-media-controls-panel {
 .merch-grid {
 position: absolute;
     top: 190px;
-    right: 10%;
-    width: 53%;
+    right: 11%;
+    width: 52%;
     display: grid;
     grid-template-columns: 1fr 1fr;   /* по две карти на ред */
     gap: 25px;
@@ -498,7 +498,6 @@ position: absolute;
     cursor: zoom-in;
 }
 
-
 .merch-info {
     padding: 15px;
     text-align: center;
@@ -525,10 +524,81 @@ position: absolute;
 }
 
 .merch-grid::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 .merch-grid::-webkit-scrollbar-thumb {
     background: #00FF9D;
     border-radius: 4px;
 }
+
+/* ==================== КОНТАКТИ ==================== */
+.contact-container {
+    position: absolute;
+    top: 190px;
+    left: 16%;
+    width: 47%;
+    height: 50%;
+}
+
+.contact-intro {
+    font-size: 1.35rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.google-form {
+    background: transparent;           /* прави фонът прозрачен */
+    padding: 0;
+    border: none;
+}
+
+.google-form iframe {
+    border-radius: 8px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: #0a0a0a;
+    padding: 60px 0 40px;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-icon {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon:hover {
+    color: #00FF9D;
+    transform: translateY(-4px);
+}
+
+.instagram:hover { color: #E1306C; }
+.facebook:hover  { color: #1877F2; }
