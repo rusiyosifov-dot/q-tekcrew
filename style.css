@@ -449,7 +449,7 @@ audio::-webkit-media-controls-panel {
 .merch-grid {
 position: absolute;
     top: 190px;
-    right: 12%;
+    right: 10%;
     width: 53%;
     display: grid;
     grid-template-columns: 1fr 1fr;   /* по две карти на ред */
