@@ -151,8 +151,8 @@ body {
 .about-text {
     position: absolute;
     top: 190px;
-    Right: 12%;
-    width: 51%;
+    Right: 12vh;
+    width: 51vh;
     height: 350px;
     overflow-y: auto;
     padding-right: 20px;
