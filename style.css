@@ -156,23 +156,69 @@ body {
     right: 12%;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 1400px) {
-    .section, .hero { width: 88%; margin-left: 6%; }
-    .about-text, .events-container, .audio-playlist, .merch-grid, 
-    .video-wrapper, .contact-container { width: 78%; }
+/* ==================== RESPONSIVE SCALING ==================== */
+
+@media (max-width: 1600px) {
+    .hero { width: 85%; margin-left: 7.5%; }
+    .section { width: 85%; margin-left: 7.5%; }
+    
+    .about-text, 
+    .events-container, 
+    .audio-playlist, 
+    .merch-grid, 
+    .video-wrapper, 
+    .contact-container {
+        width: 70%;
+        left: 15%;
+        right: auto;
+    }
+    
+    .main-title { font-size: 23vh; }
+    .section h2 { font-size: 46px; }
+}
+
+@media (max-width: 1280px) {
+    .hero { width: 88%; margin-left: 6%; }
+    .section { width: 88%; margin-left: 6%; }
+    
+    .about-text, 
+    .events-container, 
+    .audio-playlist, 
+    .merch-grid, 
+    .video-wrapper, 
+    .contact-container {
+        width: 75%;
+        left: 12.5%;
+    }
+    
+    .main-title { font-size: 21vh; }
+    .section h2 { font-size: 43px; top: 80px; }
+    
+    .merch-card img { height: 240px; }
 }
 
 @media (max-width: 1024px) {
-    .main-title { font-size: 20vh; }
-    .merch-grid { grid-template-columns: 1fr; }
-    .video-wrapper { flex-direction: column; height: auto; }
-    .video-thumbnails { width: 100%; }
+    .hero { width: 90%; margin-left: 5%; }
+    .section { width: 90%; margin-left: 5%; }
+    
+    .about-text, 
+    .events-container, 
+    .audio-playlist, 
+    .merch-grid, 
+    .video-wrapper, 
+    .contact-container {
+        width: 80%;
+        left: 10%;
+    }
+    
+    .main-title { font-size: 19vh; }
+    .section h2 { font-size: 40px; }
 }
 
+/* Много малки екрани - само леко намаляване */
 @media (max-width: 768px) {
-    .nav-container { flex-wrap: wrap; gap: 12px; padding: 0 15px; }
-    .section h2 { font-size: 40px; top: 75px; }
-    .about-text, .events-container, .audio-playlist, .merch-grid, 
-    .contact-container { width: 82%; height: 380px; left: 9%; right: auto; }
+    .main-title { font-size: 17vh; }
+    .section h2 { font-size: 36px; top: 70px; }
+    
+    .merch-card img { height: 220px; }
 }
