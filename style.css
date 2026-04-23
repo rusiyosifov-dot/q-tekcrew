@@ -11,12 +11,12 @@ body {
     overflow-x: hidden;
 }
 
-/* ==================== NAVBAR ==================== */
+/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
-    left: 10%;
-    width: 80%;
+    left: 0;
+    width: 100%;
     height: 90px;
     background: #1B1C20;
     z-index: 1000;
@@ -24,8 +24,9 @@ body {
 }
 
 .nav-container {
-    width: 100%;
+    max-width: 1400px;
     height: 100%;
+    margin: 0 auto;
     padding: 0 5%;
     display: flex;
     align-items: center;
@@ -36,54 +37,36 @@ body {
     color: #E0E0E0;
     text-decoration: none;
     font-size: 1.35rem;
-    font-weight: 400;
-    letter-spacing: 1px;
     transition: color 0.3s;
 }
 
-.nav-link:hover {
-    color: #00FF9D;
-}
+.nav-link:hover { color: #00FF9D; }
 
-.logo img {
-    width: 50px;
-    height: 45px;
-}
+.logo img { width: 50px; height: 45px; }
 
-/* ==================== HERO ==================== */
+/* HERO */
 .hero {
     height: 100vh;
     min-height: 700px;
-    width: 80%;
-    margin-left: 10%;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
                 url('images/main.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
 }
 
-.welcome {
-    font-size: 4vh;
-    font-weight: 300;
-    letter-spacing: 1px;
+.welcome { font-size: 4vh; font-weight: 300; }
+.main-title { 
+    font-size: 25vh; 
+    font-weight: 900; 
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
 }
 
-.main-title {
-    font-size: 25vh;
-    font-weight: 900;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-/* ==================== ОБЩИ СЕКЦИИ ==================== */
+/* ОБЩИ СЕКЦИИ */
 .section {
     height: 700px;
-    width: 80%;
-    margin-left: 10%;
     padding: 0 10%;
     position: relative;
     overflow: hidden;
@@ -98,127 +81,43 @@ body {
     z-index: 3;
 }
 
-.left-section h2  { color: #1B1C20; left: 5%; }
-.right-section h2 { color: #E0E0E0; right: 5%; }
+.left-section h2  { color: #1B1C20; left: 8%; }
+.right-section h2 { color: #E0E0E0; right: 8%; }
 
 .section-line {
     position: absolute;
     top: 148px;
-    width: 58%;
     height: 2px;
-    border: none;
     background: #00FF9D;
     opacity: 0.75;
     z-index: 3;
 }
 
-.left-section .section-line  { right: 5%; }
-.right-section .section-line { left: 5%; }
+.left-section .section-line  { left: 8%; width: 58%; }
+.right-section .section-line { right: 8%; width: 58%; }
 
-/* ==================== BACKGROUND ==================== */
+/* BACKGROUND */
 .left-section, .right-section {
     background-repeat: no-repeat;
     background-size: auto 100%;
 }
 
-.left-section {
-    background-position: left center;
+.left-section  { background-position: left center; }
+.right-section { background-position: right center; }
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1400px) {
+    .section, .hero { padding: 0 8%; }
 }
 
-.right-section {
-    background-position: right center;
+@media (max-width: 1200px) {
+    .main-title { font-size: 20vh; }
+    .section h2 { font-size: 42px; }
 }
 
-/* Специфични backgrounds */
-#about   { background-image: linear-gradient(90deg, rgba(187,187,188,0.30) 0%, rgba(187,187,188,1) 32%, rgba(187,187,188,1) 100%), url('images/rub.png'); }
-#audio   { background-image: linear-gradient(90deg, rgba(187,187,188,0.30) 0%, rgba(187,187,188,1) 32%, rgba(187,187,188,1) 100%), url('images/audio.png'); }
-#merch   { background-image: linear-gradient(90deg, rgba(187,187,188,0.30) 0%, rgba(187,187,188,1) 32%, rgba(187,187,188,1) 100%), url('images/merch.png'); }
-#uchastia{ background-image: linear-gradient(90deg, rgba(27,28,32,1) 0%, rgba(27,28,32,1) 68%, rgba(27,28,32,0.30) 100%), url('images/uchastia.png'); }
-#video   { background-image: linear-gradient(90deg, rgba(27,28,32,1) 0%, rgba(27,28,32,1) 68%, rgba(27,28,32,0.30) 100%), url('images/video.png'); }
-#contact { background-image: linear-gradient(90deg, rgba(27,28,32,1) 0%, rgba(27,28,32,1) 68%, rgba(27,28,32,0.30) 100%), url('images/contact.png'); }
-
-/* ==================== СЕКЦИИ СЪДЪРЖАНИЕ ==================== */
-.about-text, .events-container, .audio-playlist, .merch-grid, 
-.video-wrapper, .contact-container {
-    position: absolute;
-    top: 190px;
-    width: 51%;
-    height: 350px;
-}
-
-/* Леви секции */
-.about-text, .audio-playlist, .merch-grid, .contact-container {
-    left: 12%;
-}
-
-/* Десни секции */
-.events-container, .video-wrapper {
-    right: 12%;
-}
-
-/* ==================== RESPONSIVE SCALING ==================== */
-
-@media (max-width: 1600px) {
-    .hero { width: 85%; margin-left: 7.5%; }
-    .section { width: 85%; margin-left: 7.5%; }
-    
-    .about-text, 
-    .events-container, 
-    .audio-playlist, 
-    .merch-grid, 
-    .video-wrapper, 
-    .contact-container {
-        width: 70%;
-        left: 15%;
-        right: auto;
-    }
-    
-    .main-title { font-size: 23vh; }
-    .section h2 { font-size: 46px; }
-}
-
-@media (max-width: 1280px) {
-    .hero { width: 88%; margin-left: 6%; }
-    .section { width: 88%; margin-left: 6%; }
-    
-    .about-text, 
-    .events-container, 
-    .audio-playlist, 
-    .merch-grid, 
-    .video-wrapper, 
-    .contact-container {
-        width: 75%;
-        left: 12.5%;
-    }
-    
-    .main-title { font-size: 21vh; }
-    .section h2 { font-size: 43px; top: 80px; }
-    
-    .merch-card img { height: 240px; }
-}
-
-@media (max-width: 1024px) {
-    .hero { width: 90%; margin-left: 5%; }
-    .section { width: 90%; margin-left: 5%; }
-    
-    .about-text, 
-    .events-container, 
-    .audio-playlist, 
-    .merch-grid, 
-    .video-wrapper, 
-    .contact-container {
-        width: 80%;
-        left: 10%;
-    }
-    
-    .main-title { font-size: 19vh; }
-    .section h2 { font-size: 40px; }
-}
-
-/* Много малки екрани - само леко намаляване */
-@media (max-width: 768px) {
-    .main-title { font-size: 17vh; }
-    .section h2 { font-size: 36px; top: 70px; }
-    
-    .merch-card img { height: 220px; }
+@media (max-width: 900px) {
+    .nav-container { flex-wrap: wrap; gap: 15px; padding: 0 20px; }
+    .main-title { font-size: 16vh; }
+    .section { height: 650px; }
+    .section h2 { font-size: 38px; top: 70px; }
 }
