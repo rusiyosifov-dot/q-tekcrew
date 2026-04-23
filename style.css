@@ -11,6 +11,12 @@ body {
     overflow-x: hidden;
 }
 
+/* ==================== КОНТЕЙНЕР ==================== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* NAVBAR */
 .navbar {
     position: fixed;
@@ -44,6 +50,14 @@ body {
 
 .logo img { width: 50px; height: 45px; }
 
+/* HERO + СЕКЦИИ */
+.hero, .section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
 /* HERO */
 .hero {
     height: 100vh;
@@ -64,60 +78,29 @@ body {
     text-transform: uppercase; 
 }
 
-/* ОБЩИ СЕКЦИИ */
+/* СЕКЦИИ */
 .section {
     height: 700px;
     padding: 0 10%;
-    position: relative;
-    overflow: hidden;
 }
 
-.section h2 {
-    font-size: 50px;
-    font-weight: 900;
-    text-transform: uppercase;
-    position: absolute;
-    top: 85px;
-    z-index: 3;
+/* ==================== RESPONSIVE SCALING ==================== */
+@media (max-width: 1600px) {
+    .hero, .section { padding: 0 8%; }
 }
 
-.left-section h2  { color: #1B1C20; left: 8%; }
-.right-section h2 { color: #E0E0E0; right: 8%; }
-
-.section-line {
-    position: absolute;
-    top: 148px;
-    height: 2px;
-    background: #00FF9D;
-    opacity: 0.75;
-    z-index: 3;
-}
-
-.left-section .section-line  { left: 8%; width: 58%; }
-.right-section .section-line { right: 8%; width: 58%; }
-
-/* BACKGROUND */
-.left-section, .right-section {
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
-
-.left-section  { background-position: left center; }
-.right-section { background-position: right center; }
-
-/* ==================== RESPONSIVE ==================== */
 @media (max-width: 1400px) {
-    .section, .hero { padding: 0 8%; }
+    .main-title { font-size: 22vh; }
+    .section h2 { font-size: 46px; }
 }
 
 @media (max-width: 1200px) {
-    .main-title { font-size: 20vh; }
+    .main-title { font-size: 19vh; }
     .section h2 { font-size: 42px; }
 }
 
 @media (max-width: 900px) {
-    .nav-container { flex-wrap: wrap; gap: 15px; padding: 0 20px; }
     .main-title { font-size: 16vh; }
+    .section h2 { font-size: 36px; }
     .section { height: 650px; }
-    .section h2 { font-size: 38px; top: 70px; }
 }
