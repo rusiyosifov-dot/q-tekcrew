@@ -109,23 +109,23 @@ html {
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* ==================== ЗЕЛЕНАТА ЛИНИЯ ==================== */
+/* ==================== ЗЕЛЕНАТА ЛИНИЯ (ФИКС) ==================== */
 .section-line {
     grid-row: 2;
-    height: 2px !important; 
-    background-color: var(--primary) !important; 
+    height: 3px !important; /* Правим я малко по-плътна за по-добър вид */
+    background-color: var(--primary) !important; /* Насилствено зелено */
     border: none !important;
     margin: 1vh 0 4vh;
-    opacity: 1 !important; 
-    z-index: 10; 
-    box-shadow: 0 0 15px var(--primary); 
+    opacity: 1 !important; /* Пълна видимост */
+    z-index: 10; /* Да е над всичко останало */
+    box-shadow: 0 0 15px var(--primary); /* Връщаме и сиянието */
 }
 
-
+/* Гарантираме позицията в ляво и дясно */
 .left-section .section-line {
     grid-column: 4 / 13; 
     justify-self: end;
-    width: 100%;
+    width: 100%; /* Или колкото искаш да е дълга */
 }
 
 .right-section .section-line {
