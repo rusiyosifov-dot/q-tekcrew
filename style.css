@@ -109,13 +109,29 @@ html {
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* ==================== ЗЕЛЕНАТА ЛИНИЯ ==================== */
 .section-line {
     grid-row: 2;
-    height: 2px;
-    background: var(--primary) !important;
+    height: 2px !important; 
+    background-color: var(--primary) !important; 
+    border: none !important;
     margin: 1vh 0 4vh;
-    z-index: 2;
-    box-shadow: 0 0 15px var(--primary);
+    opacity: 1 !important; 
+    z-index: 10; 
+    box-shadow: 0 0 15px var(--primary); 
+}
+
+
+.left-section .section-line {
+    grid-column: 4 / 13; 
+    justify-self: end;
+    width: 100%;
+}
+
+.right-section .section-line {
+    grid-column: 1 / 10;
+    justify-self: start;
+    width: 100%;
 }
 
 /* Позициониране Ляво/Дясно */
